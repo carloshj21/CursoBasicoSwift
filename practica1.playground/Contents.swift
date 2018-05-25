@@ -194,3 +194,37 @@ while (isLifeAvailable) {
 }
 print("Fuera de while")
 
+
+//For anidados
+print("\nFor anidados")
+for j in 1...2 {
+    for i in 1...5 {
+        print("i = \(i)")
+    }
+    print("j = \(j)")
+}
+
+print("\nFor anidados con break")
+for j in 1...2 {
+    for i in 1...5 {
+        if i==4 {
+            break
+        }
+        print("i = \(i)")
+    }
+    print("j = \(j)")
+}
+
+
+//Outerloop
+
+print("\nOuterloops")
+outerloop: for j in 1...2 {
+    innerloop: for i in 1...5 {
+        if i == 4 {
+            break outerloop
+        }
+        print("i = \(i)")
+    }
+    print("j = \(j)")
+}
