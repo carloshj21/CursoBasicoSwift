@@ -2,7 +2,9 @@
 
 import UIKit
 
-/*let estaConectada = true
+//----------------------------------------------------------------------------------
+//Práctica 1
+let estaConectada = true
 let tieneBateria = false
 
 if(tieneBateria){
@@ -17,6 +19,9 @@ else
     print("La computadora no tiene batería")
 }
 
+
+//----------------------------------------------------------------------------------
+//Práctica 2
 let vocal = "a"
 
 switch vocal {
@@ -32,18 +37,23 @@ case "u" :
     print("u")
 default :
     print("Escribe una vocal >:v")
-}*/
+}
 
+
+//----------------------------------------------------------------------------------
+//Guardar un párrafo en una variable
 let joke = """
 Hola
 jeje
 """
 print(joke)
 
+//----------------------------------------------------------------------------------
 //Dobles comillas
 let string = "Voy a imprimir algo con comillas:\"Hola\""
 print(string)
 
+//----------------------------------------------------------------------------------
 //String vacía
 var myString = ""
 
@@ -51,10 +61,12 @@ if myString.isEmpty {
     print("The string is empty")
 }
 
+//----------------------------------------------------------------------------------
 //String vs char
 let a = "a"  //'a' is a string
 let b: Character = "b"  //'b' is a character
 
+//----------------------------------------------------------------------------------
 //String Interpolation
 let string1 = "Hello"
 let string2 = ", world!"
@@ -65,6 +77,7 @@ var newString = "Hello"
 newString + ", world!"  //"Hello, world!"
 newString += " Hello!"  //"Hello, world! Hello!"
 
+//----------------------------------------------------------------------------------
 //Insert values
 let name = "Carlos"
 let age = 17
@@ -74,7 +87,7 @@ let num1 = 4
 let num2 = 5
 print("La suma de \(num1) mas \(num2) es \(num1+num2)")
 
-
+//----------------------------------------------------------------------------------
 //Comparar strings
 let month = "January"
 let otherMonth = "January"
@@ -96,6 +109,7 @@ if name.lowercased() == "carlOS HernanDEZ".lowercased() {
     print("Los dos nombres son iguales")
 }
 
+//----------------------------------------------------------------------------------
 //Búsquedas en strings
 let newGreeting = "Hola, mundo!"
 
@@ -108,7 +122,7 @@ if saludo.contains("mi nombre es") {
     print("Haciendo una introducción")
 }
 
-
+//----------------------------------------------------------------------------------
 //Contar caracteres de una String
 let nombre = "Charles Hernandez"
 let count = nombre.count
@@ -126,10 +140,57 @@ case "a","e","i","o","u":
 default:
     print("\(someCharacter) no es una vocal")
 }
+//----------------------------------------------------------------------------------
+//for
+for index in 1..<5{
+    print("This is number \(index)")
+}
 
+for _ in 1...3{
+    print("Hola")
+}
 
+let names = ["Carlos","Ricardo","Rafael"]
+for name in names {
+    print("Hola \(name)")
+}
+for letter in "ABCD" {
+    print("La letra es \(letter)")
+}
 
+let numbers = [2,7,4,10]
+var sum = 0
+for n in numbers {
+    sum += n
+    print(sum)
+}
 
+var numberOfLives = 3
+var stillAlive = true
 
+while stillAlive {
+    numberOfLives -= 1
+    if numberOfLives == 0 {
+        stillAlive = false
+    }
+}
 
+for counter in -3...3 {
+    print(counter)
+    if counter == 0 {
+        break
+    }
+}
+
+var currentLevel: Int = 1, finalLevel: Int = 2
+var isLifeAvailable = true
+while (isLifeAvailable) {
+    if currentLevel > finalLevel {
+        print("Juego terminado. No hay niveles restantes.")
+        break
+    }
+    currentLevel += 1
+    print("Siguiente nivel")
+}
+print("Fuera de while")
 
